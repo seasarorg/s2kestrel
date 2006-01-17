@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<project xmlns:ant="jelly:ant" xmlns:artifact="artifact" >
+	<goal name="dist" prereqs="clean:clean,test:test">
+		<ant:jar jarfile="${lib}/${jarfile}" basedir="${build}" includes="${package}, SSR*.properties" excludes="**/.DS_Store"/>
+		
+		<attainGoal name="clean:clean"/>
+		<ant:zip destfile="../${releasefile}" basedir=".." includes="${projectDir} , ${projectDir}/**" excludes="**/.DS_Store , ${lib}/classes12.zip"/>
+
+		<attainGoal name="test:compile"/>
+	</goal>
+</project>

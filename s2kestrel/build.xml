@@ -1,0 +1,58 @@
+<project name="S2Kestrel" default="dist" basedir=".">
+
+	<property file="project.properties"/>
+
+	<path id="lib.classpath">
+		<fileset id="" dir="${lib}">
+			<include name="*"/>
+		</fileset>
+	</path>
+	<path id="classpath">
+		<path refid="lib.classpath" />
+		<pathelement path="${build}"/>
+	</path>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}" debug="on" classpathref="classpath"/>
+		<antcall target="copy"/>
+	</target>
+
+	<target name="copy">
+		<copy todir="${build}" >
+			<fileset dir="${src}" >
+				<include name="**/*.properties" />
+				<include name="**/*.dicon" />
+				<include name="**/*.xml" />
+				<include name="**/*.dtd" />
+				<include name="**/*.txt" />
+				<include name="**/*.xls" />
+				<exclude name="build.xml" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="dist" depends="cleantargetjarfile,compile">
+		<jar jarfile="${lib}/${jarfile}" basedir="${build}" includes="${package}, SSR*.properties" excludes="**/.DS_Store"/>
+		<antcall target="removeClassFile"/>
+		<zip destfile="../${releasefile}" basedir=".." includes="${projectDir} , ${projectDir}/**" excludes="**/.DS_Store , ${lib}/classes12.zip"/>
+		<antcall target="compile"/>
+	</target>
+
+	<target name="removeClassFile">
+		<delete dir="${build}" />
+	</target>
+	
+	<target name="cleantargetjarfile">
+		<delete>
+			<fileset dir="${lib}" defaultexcludes="no" >
+				<include name="s2-kestrel*.jar" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="init" depends="removeClassFile">
+		<mkdir dir="${build}"/>
+	</target>
+
+</project>
+
