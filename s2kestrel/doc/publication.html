@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- don't edit start -->
+<head><title>Seasar - DI Container with AOP - </title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link href="seasar_b.css" type="text/css" rel="stylesheet" media="screen"><script src="seasar_b.js" type="text/JavaScript" language="JavaScript"></script>
+<style type="text/css">
+<!--
+.table{
+margin-left : 10px;
+}
+TH{
+font-size : 10pt;
+text-align : center;
+background-color : #d1f3f4;
+}
+TD{
+font-size : 10pt;
+}
+-->
+</style>
+</head><body onload="preload('ja')"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="left"><tr>
+<td align="left" valign="top" width="780"><table width="780" border="0" cellspacing="0" cellpadding="0" class="white">
+<tr><td colspan="7"><img height="5" width="780" src="images/top01_b.gif" alt=""></td></tr>
+<tr><td><img height="117" width="235" src="images/top02_b.gif" alt="Seasar"></td>
+<td colspan="3"><img height="117" width="289" src="images/top03.gif" alt="DI Container with AOP"></td>
+<td colspan="3"><img height="117" width="256" src="images/spacer.gif" alt=""></td>
+</tr><tr><td rowspan="2"><img src="images/top04.gif" alt="" height="49" width="235"></td>
+<td><a href="index.html"><img src="images/menu01_b_ja.gif" height="30" width="78" border="0" alt="" id="menu01" onmouseover="swap(1)" onmouseout="restore(1)"></a></td>
+<td><a href="projects.html"><img src="images/menu02_b_ja.gif" height="30" width="101" border="0" alt="" id="menu02" onmouseover="swap(2)" onmouseout="restore(2)"></a></td>
+<td><a href="products.html"><img src="images/menu03_b_ja.gif" height="30" width="110" border="0" alt="" id="menu03" onmouseover="swap(3)" onmouseout="restore(3)"></a></td>
+<td><a href="resources.html"><img src="images/menu04_b_ja.gif" height="30" width="113" border="0" alt="" id="menu04" onmouseover="swap(4)" onmouseout="restore(4)"></a></td>
+<td><img src="images/menu05_b_ja.gif" height="30" width="109" border="0" alt="" id="menu05" onmouseover="swap(5)" onmouseout="restore(5)"></td>
+<td><img height="30" width="34" src="images/menu06.gif" alt=""></td></tr><tr>
+<td colspan="6"><img height="19" width="545" src="images/spacer.gif" alt=""></td></tr></table>
+<table  width="780" border="0" cellspacing="0" cellpadding="0" class="menu">
+<tr align="left" valign="top"><td width="14"><img height="14" width="14" src="images/spacer.gif" alt=""></td><td width="740" class="main">
+<!-- don't edit end -->
+<!-- document start -->
+
+<ul>
+<li><a href="SEASAR-LICENSE.TXT">雑誌掲載記事</a></li>
+</ul>
+<table border="1" cellspacing="0" width="740">
+<col span="1" align="center">
+<col span="1">
+<col span="1" align="center">
+<tbody>
+<tr>
+<th>発売日</th>
+<th>雑誌名</th>
+<th>号</th>
+<th>タイトル</th>
+<th>著者</th>
+</tr>
+<tr>
+<td>2005/09</td>
+<td>JAVA PRESS<br>
+(技術評論社)</td>
+<td>Vol.44</td>
+<td>特集1 祝Java生誕10周年記念スペシャル企画<br>
+<strong>EoDに見る明日のJava開発スタイル</strong><br>
+<strong>Tiger，Groovy，JSFからAjax，DIまで徹底調査！</strong><br>
+第8章 DI／Tapestry／Hibernateによるアプリケーション設計
+</td>
+<td>岡本隆史<br>
+竹添直樹</td>
+</tr>
+<tr>
+<td rowspan="2">2005/08</td>
+<td rowspan="2">Java World<br>
+(IDGジャパン)</td>
+<td rowspan="2">2005/10</td>
+<td>イベント・リポート<br>
+JavaWorld DAY 2005 Report<br>
+<strong>ロッド・ジョンソン氏来日記念対談 DIコンテナ，かくあるべし</strong><br>
+<strong>ロッドジョンソン×ひがやすを</strong></td>
+<td>編集部</td>
+</tr>
+<tr>
+<td>特集1<br>
+<strong>DIコンテナ完全ガイド</strong><br>
+<strong>プロダクト研究編 Spring ＆ Seasar2 － 2大DIコンテナの特色</strong></td>
+<td>北條育男<br>
+三上公明<br>
+鈴木雄介</td>
+</tr>
+<tr>
+<td>2005/08</td>
+<td>WEB+DB PRESS<br>
+(技術評論社)</td>
+<td>Vol.28</td>
+<td><strong>Javaグッドデザイン・バッドデザイン</strong><br>
+最終回：AOPでシンプルデザイン</td>
+<td>縣俊貴</td>
+</tr>
+<tr>
+<td>2005/06</td>
+<td>Java World<br>
+(IDGジャパン)</td>
+<td>2005/08</td>
+<td>特集1<br>
+デザイン・パターン攻略ガイド<br>
+<strong>DIコンテナと「開放－閉鎖原則」</strong></td>
+<td>ひがやすを</td>
+</tr>
+<tr>
+<td>2005/06</td>
+<td>WEB+DB PRESS<br>
+(技術評論社)</td>
+<td>Vol.27</td>
+<td>◆特集1 <br>
+<strong>実践！ Seasar2/Spring &amp; オープンソースJSFによるWebシステム設計</strong><br>
+<strong>パート1　DI編</strong><br>
+第1章　はじめてのDI<br>
+第2章　DIで作る変更に強いビジネスロジック<br>
+<strong>パート2　JSF編</strong><br>
+第5章　S2JSF</td>
+<td>羽生章洋</td>
+</tr>
+<tr>
+<td>2005/03</td>
+<td>Java World<br>
+(IDGジャパン)</td>
+<td>2005/05</td>
+<td>特集2<br>
+開発者にとって“易しく、優しい”軽量コンテナ<br>
+<strong>Seasar2の実力を探る</strong></td>
+<td>ひがやすを<br>木村聡<br>
+小林浩一<br>
+まるお</td>
+</tr>
+<tr>
+<td>2005/01</td>
+<td>JAVA PRESS<br>
+(技術評論社)</td>
+<td>Vol.40</td>
+<td><strong>Seasarのからさわぎ＠東京 2004 Finalイベントレポート</strong></td>
+<td>編集部</td>
+</tr>
+<tr>
+<td>2004/11</td>
+<td>JAVA PRESS<br>
+(技術評論社)</td>
+<td>Vol.39</td>
+<td><strong>Seasar2で実践！ DIコンテナとアスペクト指向プログラミング</strong><br>
+DAOパターンを使ったビジネスロジックへの適用例を中心に</td>
+<td>佐藤匡剛<br>
+山田祥寛</td>
+</tr>
+<tr>
+<td>2004/09</td>
+<td>JAVA PRESS<br>
+(技術評論社)</td>
+<td>Vol.38</td>
+<td><strong>Seasar 2によるJ2EEアプリ構築</strong><br>
+熱い視線を集める軽量コンテナ</td>
+<td>佐藤匡剛<br>
+山田祥寛</td>
+</tr>
+<tr>
+<td rowspan="2">2004/08</td>
+<td rowspan="2">WEB+DB PRESS<br>
+(技術評論社)</td>
+<td rowspan="2">Vol.22</td>
+<td>◆特別企画1<br>
+<strong>はじめてのSeasar2</strong><br>
+優しくって簡単なJ2EEがやってきた！</td>
+<td>羽生章洋<br>
+溝口顕一</td>
+</tr>
+<tr>
+<td><strong>Seasarのからさわぎ＠福岡</strong></td>
+<td>編集部</td>
+</tr>
+<tr>
+<td>2003/08</td>
+<td>WEB+DB PRESS<br>
+(技術評論社)</td>
+<td>Vol.16</td>
+<td><strong>日本発！はじめてのSeasar</strong><br>
+「軽量」「高速」「オープンソース」アプリケーションサーバ登場</td>
+<td>羽生章洋</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ネット掲載記事
+</ul>
+<table border="1" cellspacing="0" width="740">
+<col span="1" align="center">
+<tbody>
+<tr>
+<th>掲載日</th>
+<th>サイト</th>
+<th>タイトル</th>
+<th>著者</th>
+</tr>
+<tr>
+<td>2005/09/03</td>
+<td>@IT</td>
+<td><a href="http://www.atmarkit.co.jp/fjava/rensai3/seasar2_03/seasar2_03_1.html">The Seasar Projectの全貌を探る（3）<BR>
+<strong>SeasarV2によるDBアクセス機能</strong></a></td>
+<td>沖林正紀</td>
+</tr>
+<tr>
+<td>2005/08/25</td>
+<td>IT Pro</td>
+<td><a href="http://itpro.nikkeibp.co.jp/members/NBY/techsquare/20050819/166545/"><strong>特集「部品と部品の関係を切り離す」（1）</strong></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>2005/07/16</td>
+<td>@IT</td>
+<td><a href="http://www.atmarkit.co.jp/fjava/rensai3/seasar2_02/seasar2_02_1.html">The Seasar Projectの全貌を探る（2）<br>
+<strong>DI+AOPを実現するSeasar V2</strong></a></td>
+<td>沖林正紀</td>
+</tr>
+<tr>
+<td>2005/07/13</td>
+<td>MYCOM PC WEB</td>
+<td><a href="http://pcweb.mycom.co.jp/news/2005/07/13/005.html"><strong>Seasar4 EA1公開 - backport175によるアノテーションをサポート</strong></a></td>
+<td>杉山貴章</td>
+</tr>
+<tr>
+<td>2005/06/16</td>
+<td>@IT</td>
+<td><a href="http://www.atmarkit.co.jp/fjava/kaisetsu/j2eewatch07/j2eewatch07_1.html"><strong>DIとAOPがサーバ・コンポーネント技術を変える</strong></a></td>
+<td>吉川和巳</td>
+</tr>
+<tr>
+<td>2005/06/09</td>
+<td>@IT</td>
+<td><a href="http://www.atmarkit.co.jp/fjava/rensai3/seasar2_01/seasar2_01.html">The Seasar Projectの全貌を探る（1）<br>
+<strong>次世代J2EEを目指すSeasar2はどう誕生したか</strong></a></td>
+<td>沖林正紀</td>
+</tr>
+<tr>
+<td>2005/05/31</td>
+<td>IT Pro</td>
+<td><a href="http://itpro.nikkeibp.co.jp/free/JAV/J2EE/20050530/1/">【連載◎開発現場から時代を眺める by arton】第5回<br>
+<strong>「動的言語と静的言語の交差点──RubyとJava/Seasar2の出会い」</strong></a></td>
+<td>arton</td>
+</tr>
+<tr>
+<td>2005/05/30</td>
+<td>MYCOM PC WEB</td>
+<td><a href="http://pcweb.mycom.co.jp/news/2005/05/30/015.html"><strong>「J2EEを易しく」を.NETでも - .NET版Seasar「S2.NET」公開、S2JCA 0.2.0も</strong></a></td>
+<td>後藤大地</td>
+</tr>
+<tr>
+<td>2005/05/23</td>
+<td>MYCOM PC WEB</td>
+<td><a href="http://pcweb.mycom.co.jp/news/2005/05/23/011.html"><strong>「J2EEを易しく・優しく」Seasar V2関連プロダクト - S2Axis 1.0.0公開</strong></a></td>
+<td>後藤大地</td>
+</tr>
+<tr>
+<td>2005/04/22</td>
+<td>IT Pro</td>
+<td><a href="http://itpro.nikkeibp.co.jp/free/NBY/NEWS/20050422/159965/"><strong>Seasar Project，DIコンテナにEJB次版の仕様を取り込むことを表明</strong></a></td>
+<td>八木玲子</td>
+</tr>
+<tr>
+<td>2005/03/25</td>
+<td>IT Pro</td>
+<td><a href="http://itpro.nikkeibp.co.jp/free/ITPro/NEWS/20050325/158027/"><strong>WebデザイナとJavaプログラマの分業を容易にするフレームワーク，S2JSFを無償公開</strong></a></td>
+<td>高橋信頼</td>
+</tr>
+<tr>
+<td>2005/03/16</td>
+<td>ThinkIT</td>
+<td><a href="http://www.thinkit.co.jp/free/tech/3/9/1.html"><strong>Eclipse3ではじめるJava Webアプリケーション開発</strong><BR>
+第９回：O/Rマッパーの利用</a></td>
+<td>宮本信二</td>
+</tr>
+<tr>
+<td>2004/11/20</td>
+<td>IT Pro</td>
+<td><strong><a href="http://itpro.nikkeibp.co.jp/free/ITPro/NEWS/20041120/152861/">国産オープンソース軽量Java APサーバーSeasarのコミュニティがNPO法人を設立へ</a></strong></td>
+<td>高橋信頼</td>
+</tr>
+<tr>
+<td>2004/07/09</td>
+<td>IT Pro</td>
+<td><a href="http://itpro.nikkeibp.co.jp/members/ITPro/oss/20040707/146923/"><strong>「目的は新しい技術を追うことではなく，実案件の課題解決」</strong><br>
+――Java軽量コンテナ「Seasar」開発者 比嘉康雄氏</a><br>
+(参照するにはIT Proのアカウントが必要です)</td>
+<td>高橋信頼</td>
+</tr>
+<tr>
+<td>2004/04/13</td>
+<td>IT Pro</td>
+<td><a href="http://itpro.nikkeibp.co.jp/free/JAV/J2EE/20040412/1/"><strong>日本発の「世界最先端」，オープンソース軽量コンテナに熱い視線</strong><br>
+――Seasar2説明会から</a></td>
+<td>arton</td>
+</tr>
+</tbody>
+</table>
+<!-- document end -->
+<!-- don't edit start -->
+</td>
+<td width="14"><img height="14" width="14" src="images/spacer.gif" alt=""></td>
+</tr><tr>
+<td width="14"><img height="30" width="14" src="images/spacer.gif" alt=""></td>
+<td width="766"><img height="30" width="592" src="images/spacer.gif" alt=""></td>
+</tr><tr>
+<td width="14"><img height="14" width="14" src="images/spacer.gif" alt=""></td>
+<td width="766" class="copyright">&copy; Copyright The Seasar Foundation and the others 2004-2005, all rights reserved.</td>
+</tr></table>
+<td class="backright" align="left" valign="top">&nbsp;</td></tr><tr>
+<td class="backunder" align="left"  valign="top" width="780" height="16">&nbsp;</td>
+<td class="backcorner" align="left" valign="top" height="16">&nbsp;</td>
+</tr></table></body>
+<!-- don't edit end -->
+</html>
